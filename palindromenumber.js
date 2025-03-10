@@ -3,3 +3,13 @@ const isPalindrome=function(x){
 }
 const res=isPalindrome(121);
 console.log(res)
+
+
+
+//////////////////////////////////////////////////////////
+
+function plaindrome(str){
+    let revStr=str.toString().split("").reverse().join("")
+    return str.toString()===revStr
+}
+console.log(plaindrome(121))
