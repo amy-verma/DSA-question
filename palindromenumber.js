@@ -1,10 +1,16 @@
-const isPalindrome=function(x){
-    return x=== +x.toString().split("").reverse().join("");
+function isPalindrome(x){
+    let str=x.toString();
+    let left=0;
+    let right=str.length-1;
+    while(left<right){
+        if(str[left]!==str[right]) return false
+        left++
+        right--
+        
+    }
+    return true
 }
-const res=isPalindrome(121);
-console.log(res)
-
-
+console.log(isPalindrome("MadaM"))
 
 //////////////////////////////////////////////////////////
 

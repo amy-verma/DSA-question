@@ -1,10 +1,11 @@
-function nonRepeating(str){
-    let unique="";
-    for(let char of str){
-        if(unique.indexOf(char)===-1){
-            unique +=char
+function Unique(str){
+    let n=str.split("");
+    let res="";
+    for(let i=0;i<n.length;i++){
+        if(!res.includes(n[i])){
+            res +=n[i]
         }
     }
-    return unique;
+    return res
 }
-console.log(nonRepeating("amitt verma"))
+console.log(Unique("amitt"))

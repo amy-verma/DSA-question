@@ -7,7 +7,16 @@ function fibo(n){
 }
 console.log(fibo(5))
 
-
+// ----------------------------------
+function fibo(n){
+    let res=[0,1];
+    for(let i=2;i<=n;i++){
+        res.push(res[i-1]+res[i-2])
+    }
+    return res
+}
+console.log(fibo([6]))
+// ----------------------
 
 // Bubble Sort Function
 function bubbleSort(arr) {
