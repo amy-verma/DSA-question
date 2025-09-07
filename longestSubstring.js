@@ -1,25 +1,25 @@
-// ----------------------------------
-function longestSunStr(s) {
-  if (!s) return { length: 0, substr: "" };
-  let end = 0;
-  let start = 0;
-  let maxLength = 0;
-  let substr = "";
-  let uniqueElement = new Set();
-  while (end < s.length) {
-    if (!uniqueElement.has(s[end])) {
-      uniqueElement.add(s[end]);
-
-      if (uniqueElement.size > maxLength) {
-        maxLength = uniqueElement.size;
-        substr = s.slice(start, end + 1);
+function longestString(s){
+  if(!s) return {length:0,substr:""}
+  let end=0;
+  let start=0;
+  let maxlength=0;
+  let substr="";
+  let uniqueElem=new Set();
+  while(end<s.length){
+    if(!uniqueElem.has(s[end])){
+      uniqueElem.add(s[end])
+      
+      if(uniqueElem.size>maxlength){
+        maxlength=uniqueElem.size;
+        substr=s.slice(start,end+1)
       }
       end++;
-    } else {
-      uniqueElement.delete(s[start]);
+      
+    }else{
+      uniqueElem.delete(s[start])
       start++;
     }
   }
-  return { length: maxLength, substr };
+  return {length:maxlength,substr}
 }
-console.log(longestSunStr("abcabcbb"));
+console.log(longestString("abcabcbb"))

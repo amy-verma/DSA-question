@@ -36,3 +36,25 @@ function secondLargest1(arr){
     return secondlargest
 }
 console.log(secondLargest1([12,52,63,23]))
+
+function secondLargest(arr){
+  let max1=0;
+  let max2=0;
+  if(arr[0]>arr[1]){
+    arr[0]=max1;
+    arr[1]=max2;
+  }else if(arr[1]>arr[0]){
+    arr[1]=max1;
+    arr[0]=max2
+  }
+  for(let i=0;i<arr.length;i++){
+    if(arr[i]>max1){
+      max2=max1;
+      max1=arr[i]
+    }else if(arr[i]>max2){
+      max2=arr[i]
+    }
+  }
+  return max2
+}
+console.log(secondLargest([2,9,1,7,22,43]))
