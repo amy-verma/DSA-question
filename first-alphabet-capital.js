@@ -1,10 +1,10 @@
-function capitalWord(sentence){
-    let words=sentence.split(" ");
-    let word="";
-    for(let i=0;i<words.length;i++){
-        word +=words[i].charAt(0).toUpperCase()+words[i].slice(1)+" "
-        
-    }
-    return word.trim()
+// let x="i am amit"
+function firstcaps(str){
+  let word=str.split(" ");
+  let res="";
+  for(let i=0;i<word.length;i++){
+    res+=word[i].charAt(0).toUpperCase()+word[i].slice(1)+" "
+  }
+  return res
 }
-console.log(capitalWord("i am amit"))
+console.log(firstcaps("i am amit"))
